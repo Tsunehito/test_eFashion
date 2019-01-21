@@ -195,8 +195,25 @@ class Terminal
     echo 'Result:' . "\n";
     echo 'Plateau max X = ' . $plateau[0] . ' and max Y = ' . $plateau[1] . "\n";
     echo 'New coordinates:' . "\n";
-    echo $finalPositionRover1[0] . ' ' . $finalPositionRover1[1] . ' ' . $finalPositionRover1[2] . ' * ';
-    echo $finalPositionRover2[0] . ' ' . $finalPositionRover2[1] . ' ' . $finalPositionRover2[2];
+
+    if (($finalPositionRover1[0] < 0) || ($finalPositionRover1[0] > $plateau[0]) ||
+        ($finalPositionRover1[1] < 0) || ($finalPositionRover1[1] > $plateau[1]))
+        {
+          echo 'The rover No.1 is out of the plateau * ';
+        }
+    else
+    {
+      echo $finalPositionRover1[0] . ' ' . $finalPositionRover1[1] . ' ' . $finalPositionRover1[2] . ' * ';
+    }
+    if (($finalPositionRover2[0] < 0) || ($finalPositionRover2[0] > $plateau[0]) ||
+        ($finalPositionRover2[1] < 0) || ($finalPositionRover2[1] > $plateau[1]))
+        {
+          echo 'The rover No.2 is out of the plateau';
+        }
+    else
+    {
+      echo $finalPositionRover2[0] . ' ' . $finalPositionRover2[1] . ' ' . $finalPositionRover2[2];
+    }
   }
 }
 
