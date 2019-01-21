@@ -6,6 +6,7 @@
 class Input
 {
   /**
+   * Input an information of the size of the plateau
    * return two values (x and y)
    * @return array x and y co-ordinates
    */
@@ -16,6 +17,7 @@ class Input
   }
 
   /**
+   * Input an information of the first position of rover
    * return three values (x, y and orientation)
    * @return array x , y co-ordinates and his orientation
    */
@@ -25,6 +27,10 @@ class Input
     return $positionOfRover;
   }
 
+  /**
+   * Input an information of the order to rover
+   * @return array
+   */
   static function inputOrderToRover()
   {
     $orderToRover = trim(fgets(STDIN));
@@ -43,8 +49,8 @@ class Position
 
    /**
     * method to get the orientation of a rover
-    * @param  [String] $position [description]
-    * @return [integer]
+    * @param  String $position
+    * @return integer
     */
    static function getDegree($position)
    {
@@ -66,9 +72,14 @@ class Position
      return $degree;
    }
 
-   static function getOrientation($orientation)
+   /**
+    * method to get an orientation from the degree
+    * @param  integer $orientation
+    * @return string
+    */
+   static function getOrientation($degree)
    {
-     switch ($orientation)
+     switch ($degree)
      {
        case -720:
        case -360:
@@ -107,9 +118,9 @@ class Control
 {
   /**
    * This methode will make a rover move
-   * @param  [array] $position [$position[0] = x, $position[1] = y, $position[2] = orientation]
-   * @param  [array] $order
-   * @return [array] return $position after moving on the plateau
+   * @param  array $position [$position[0] = x, $position[1] = y, $position[2] = orientation]
+   * @param  array $order
+   * @return array return $position after moving on the plateau
    */
   static function orderToRover($position, $order)
   {
