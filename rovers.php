@@ -208,11 +208,11 @@ class Terminal
     if (($finalPositionRover2[0] < 0) || ($finalPositionRover2[0] > $plateau[0]) ||
         ($finalPositionRover2[1] < 0) || ($finalPositionRover2[1] > $plateau[1]))
         {
-          echo 'The rover No.2 is out of the plateau';
+          echo 'The rover No.2 is out of the plateau' . "\n";
         }
     else
     {
-      echo $finalPositionRover2[0] . ' ' . $finalPositionRover2[1] . ' ' . $finalPositionRover2[2];
+      echo $finalPositionRover2[0] . ' ' . $finalPositionRover2[1] . ' ' . $finalPositionRover2[2] ."\n";
     }
   }
 }
