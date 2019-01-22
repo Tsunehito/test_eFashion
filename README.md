@@ -9,13 +9,13 @@ Please open your terminal then clone this repository.
 git clone https://github.com/Tsunehito/test_eFashion.git
 ```
 
-Hit up  the following command to start PHP:
+Hit up  the following command to prepare PHP environment:
 
 ```bash
 docker-compose up -d
 ```
 
-After finising downloading.And you can open a PHP command line by
+After finising downloading, you can open a PHP command line by
 
 ```bash
 docker-compose exec cli bash
